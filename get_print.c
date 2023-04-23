@@ -17,6 +17,10 @@ case 'c':
 return (print_char);
 case '%':
 return (print_percent);
+case 'i':
+return (print_int);
+case 'd':
+return (print_int);
 default:
 return (NULL);
 }
