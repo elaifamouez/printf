@@ -31,8 +31,16 @@ continue;
 while (get_flag(*p, &flags))
 p++;
 pfunc = get_print(*p);
-count += (pfunc != NULL) ? pfunc(arguments, &flags)
-: (_putchar('%'), _putchar(*p));
+if (pfunc)
+{
+count += pfunc(arguments, &flags);
+}
+else
+{
+_putchar('%');
+_putchar(*p);
+count += 2;
+}
 }
 else
 count += _putchar(*p);
@@ -41,3 +49,4 @@ _putchar(-1);
 va_end(arguments);
 return (count);
 }
+
