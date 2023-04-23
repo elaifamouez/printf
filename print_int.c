@@ -9,7 +9,7 @@
 int print_int(va_list l, flags_t *f)
 {
 int n = va_arg(l, int), res;
-unsigned int d = 0, u;
+unsigned int d = 0, u, n1, divisor = 1;
 if (n < 0)
 u = n * -1;
 else
@@ -26,6 +26,24 @@ if (f->plus == 1 && n >= 0)
 res += _putchar('+');
 if (n <= 0)
 res++;
-print_number(n);
+if (n < 0)
+{
+_putchar('-');
+n1 = -n;
+}
+else
+{
+n1 = n;
+}
+while (n1 / divisor > 9)
+{
+divisor *= 10;
+}
+while (divisor != 0)
+{
+_putchar((n1 / divisor) +'0');
+n1 %= divisor;
+divisor /= 10;
+}
 return (res);
 }
