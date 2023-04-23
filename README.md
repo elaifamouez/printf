@@ -4,8 +4,8 @@
 
 ## Resource
 
-- [secrets of printf](https://www.cypress.com/file/54761/download)
 - [All About Printf](https://akshatshibu.wordpress.com/2015/07/22/all-about-printf/)
+- [secrets of printf](https://www.cypress.com/file/54761/download)
 
 
 ## Description
@@ -52,7 +52,11 @@
 	```sh
 	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 test/main.c *.c -o print
 	```
-- All test files will be in the [test](./test) directory.
+## Files
+* `README.md` : Current file, contains information about this project
+* `main.h` : Header file, contains all prototypes for funcitons used, as well as libriaries.
+* `printf.c` : Contains the code for `_printf`
+* `man_3_printf`: man page for our `_printf`
 
 
 ### Authors
