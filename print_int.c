@@ -10,10 +10,10 @@ int print_int(va_list l, flags_t *f)
 {
 int n = va_arg(l, int), res;
 unsigned int d = 0, u;
-if (i < 0)
-u = i * -1;
+if (n < 0)
+u = n * -1;
 else
-u = i;
+u = n;
 while (u != 0)
 {
 u /= 10;
