@@ -21,6 +21,8 @@ case 'i':
 return (print_int);
 case 'd':
 return (print_int);
+case 'b':
+return (print_binary);
 default:
 return (NULL);
 }
