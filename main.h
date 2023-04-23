@@ -39,7 +39,7 @@ int (*get_print(char s))(va_list, flags_t *);
 /* get_flag */
 int get_flag(char s, flags_t *f);
 /* print_string */
-int pirint_string(va_list l, flags_t *f);
+int print_string(va_list l, flags_t *f);
 /* print_char */
 int print_char(va_list l, flags_t *f);
 /* print_percent */
