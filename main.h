@@ -38,4 +38,5 @@ int print_char(va_list l, flags_t *f);
 int print_percent(va_list l, flags_t *f);
 int print_int(va_list l, flags_t *f);
 int count_digit(int i);
+void print_number(int n);
 #endif
