@@ -9,16 +9,15 @@
  */
 int (*get_print(char s))(va_list, flags_t *)
 {
-ph func_arr[] = {
-{'s', print_string},
-{'c', print_char},
-{'%', print_percent}
-};
-int flags = 3;
-register int i;
-
-for (i = 0; i < flags; i++)
-if (func_arr[i].c == s)
-return (func_arr[i].f);
+switch (s)
+{
+case 's':
+return (print_string);
+case 'c':
+return (print_char);
+case '%':
+return (print_percent);
+default:
 return (NULL);
+}
 }
