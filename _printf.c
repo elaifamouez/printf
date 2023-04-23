@@ -3,7 +3,6 @@
  * _printf - printf function
  * @format: const char pointer
  * Return: b_len
- * this is the start of the file
  */
 int _printf(const char *format, ...)
 {
@@ -37,9 +36,7 @@ count += pfunc(arguments, &flags);
 }
 else
 {
-_putchar('%');
-_putchar(*p);
-count += 2;
+count += _putchar('%') + _putchar(*p);
 }
 }
 else
