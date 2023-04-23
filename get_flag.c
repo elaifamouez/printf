@@ -9,20 +9,21 @@
 int get_flag(char s, flags_t *f)
 {
 int i = 0;
-switch (s)
+
+if (s == '+')
 {
-case '+':
-f->plus = 1;
+f->plus++;
 i = 1;
-break;
-case ' ':
-f->space = 1;
+}
+else if (s == ' ')
+{
+f->space++;
 i = 1;
-break;
-case '#':
-f->hash = 1;
+}
+else if (s == '#')
+{
+f->hash++;
 i = 1;
-break;
 }
 return (i);
 }
