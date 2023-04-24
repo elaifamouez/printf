@@ -29,7 +29,7 @@
 - All your files should end with a new line.
 - No more than 5 functions per file.
 - You are not allowed to use global variables.
-- The prototypes of all your functions should be included in your header file called `holberton.h`
+- The prototypes of all your functions should be included in your header file called `main.h`
 - All your header files should be include guarded.
 
 ### Authorized functions and macros
