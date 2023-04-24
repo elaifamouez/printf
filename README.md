@@ -61,5 +61,5 @@
 
 ### Authors
 
-- elaifamouez(https://github.com/elaifamouez)
-- Kusare Chuwa Kusare(https://github.com/count58) 
+- [elaifamouez](https://github.com/elaifamouez)
+- [Kusare Chuwa Kusare](https://github.com/count58) 
