@@ -59,8 +59,9 @@ int spec_c;
 int *flags;
 char *mods;
 } printh_t;
-
 int _printf(const char *format, ...);
+int print_helper(printh_t *help_s, va_list args);
+printh_t *init_help_s(const char *format, va_list args);
 int handle_alpha_percent(printh_t *help_s, va_list args);
 char *create_buff(unsigned int bytes);
 unsigned int copy_buff(char *str, printh_t *help_s);
