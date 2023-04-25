@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * init_help_s - initializes print helper structure, creating space for it
  * @format: pointer to format specifier string to set as pointer
