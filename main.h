@@ -10,8 +10,8 @@
  */
 typedef struct type_specifier
 {
-	char t;
-	char *(*f)(va_list args, char *mods);
+char t;
+char *(*f)(va_list args, char *mods);
 } spec_t;
 /**
  * struct flag_specifier - contains a flag and it's valid specifiers and func
@@ -21,9 +21,9 @@ typedef struct type_specifier
  */
 typedef struct flag_specifier
 {
-	char flag;
-	char *specs;
-	char *(*f)(char *);
+char flag;
+char *specs;
+char *(*f)(char *);
 } flag_t;
 /**
  * struct print_helper_s - contains values needed in print helper
@@ -44,24 +44,20 @@ typedef struct flag_specifier
  */
 typedef struct print_helper_s
 {
-	/* string  values */
-	const char *format;
-	char *buff;
-	char *c;
-	/* boolean values */
-	char dot;
-	char busy;
-	/* integer values */
-	unsigned int f_i;
-	unsigned int buff_i;
-	unsigned int beg_i;
-	unsigned int buff_len;
-	int width;
-	int precision;
-	int spec_c;
-	/* flags & mods are pointers to arrays of booleans */
-	int *flags;
-	char *mods;
+const char *format;
+char *buff;
+char *c;
+char dot;
+char busy;
+unsigned int f_i;
+unsigned int buff_i;
+unsigned int beg_i;
+unsigned int buff_len;
+int width;
+int precision;
+int spec_c;
+int *flags;
+char *mods;
 } printh_t;
 
 int _printf(const char *format, ...);
