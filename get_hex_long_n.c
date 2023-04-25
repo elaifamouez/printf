@@ -9,31 +9,14 @@
  */
 char *get_hex_long_n(unsigned long int num)
 {
-int length, len = 1;
-int rem, i;
-unsigned int base = 16;
+int length;
 char *ret;
 
-while (num > (unsigned long int)base - 1)
-{
-len++;
-num /= (unsigned long int)base;
-}
-length = len;
+length = get_longnumbase_len(num, 16);
 ret = malloc(length + 1);
 if (!ret)
 return (NULL);
-ret[length] = '\0';
-i = length - 1;
-while (i >= 0)
-{
-rem = num % (unsigned long int)base;
-if (rem > 9)
-ret[i] = rem + 87;
-else
-ret[i] = rem + '0';
-num /= (unsigned long int)base;
-i--;
-}
+fill_longnumbase_buff(num, 16, ret, length);
 return (ret);
 }
+
