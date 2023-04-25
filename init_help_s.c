@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * init_help_s - initializes print helper structure, creating space for it
  * @format: pointer to format specifier string to set as pointer
  * @args: va_list pointer, will be sent to free_all to have memory freed if a
  * malloc fails.
+ *
  * Return: pointer to structure created in memory
  */
 printh_t *init_help_s(const char *format, va_list args)
@@ -18,15 +20,25 @@ va_end(args);
 return (NULL);
 }
 help_s->flags = calloc(5, sizeof(int));
-help_s->mods = calloc(2, sizeof(char));
-help_s->buff = create_buff(BUFF_SIZE);
-help_s->c = create_buff(2);
-if (!help_s->flags || !help_s->mods)
+if (!help_s->flags)
 {
 free_all(help_s, args);
 return (NULL);
 }
-if (!help_s->buff || !help_s->c)
+help_s->mods = calloc(2, sizeof(char));
+if (!help_s->mods)
+{
+free_all(help_s, args);
+return (NULL);
+}
+help_s->buff = create_buff(BUFF_SIZE);
+if (!help_s->buff)
+{
+free_all(help_s, args);
+return (NULL);
+}
+help_s->c = create_buff(2);
+if (!help_s->c)
 {
 free_all(help_s, args);
 return (NULL);
