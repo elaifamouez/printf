@@ -10,12 +10,12 @@
  */
 int get_longnumbase_len(unsigned long int num, unsigned int base)
 {
-int len;
+int len = 1;
 
-for (len = 1; num > (unsigned long int)base - 1; len++)
+while (num > (unsigned long int)base - 1)
 {
+len++;
 num /= (unsigned long int)base;
 }
 return (len);
 }
-

@@ -10,10 +10,11 @@
  */
 int get_numbase_len(unsigned int num, unsigned int base)
 {
-int len;
+int len = 1;
 
-for (len = 1; num > base - 1; len++)
+while (num > base - 1)
 {
+len++;
 num /= base;
 }
 return (len);
