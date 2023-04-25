@@ -21,6 +21,7 @@ help_s = init_help_s(format, args);
 if (!help_s)
 return (-1);
 E = 0;
+E = print_helper(help_s, args);
 while (format[help_s->f_i])
 {
 if (format[help_s->f_i] == '%' && !help_s->busy)
@@ -44,7 +45,6 @@ return (-1);
 }
 else if (help_s->busy)
 {
-E = print_helper(help_s, args);
 if (!E)
 {
 free_all(help_s, args);
